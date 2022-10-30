@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core
 {
+    /// <summary>
+    /// base for the commands. There are around 120 commands in the application. 
+    /// </summary>
     public abstract class Command
     {
         protected abstract void OnExecuted(EventArgs e);

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Core
 {
+    /// <summary>
+    /// view factory
+    /// </summary>
     public interface IViewFactory
     {
         IOpenFileView OpenView();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Core
 {
     /// <summary>
-    /// command. 
+    /// command sample. This is usually bind to a menu item and short cut at well. 
     /// </summary>
     public class OpenFileCommand : Command
     {

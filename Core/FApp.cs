@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Core
 {
+    /// <summary>
+    /// contains app wide stuff like the viewfactory. 
+    /// </summary>
     public static class FApp
     {
  

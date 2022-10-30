@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace AvaloniaApplicationOpenFileAsync
 {
+    /// <summary>
+    /// implementation for avalonia
+    /// </summary>
     public class OpenFileView : IOpenFileView, IDisposable
     {
         private OpenFileDialog d = new OpenFileDialog();
@@ -64,8 +67,7 @@ namespace AvaloniaApplicationOpenFileAsync
 
             });
 
-            string ghalt = "asdf";
-
+          
             if (task.Result == null || task.Result.Length == 0)
                 return false;
             selectedFiles = task.Result;
