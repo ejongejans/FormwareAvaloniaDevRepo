@@ -1,0 +1,151 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+using Avalonia.Controls;
+
+namespace  FAvalonia.favaloniaViews.Controls
+{
+    public partial class FButton : Button 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FToolButton : Button 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FCheckBox : CheckBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+      public partial class FLabel : TextBlock 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FComboBox : ComboBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FComboBoxEnum<T> : ComboBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FComboBoxGeneric<T> : ComboBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+     public partial class FProgressBar : ProgressBar 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FNumeric : UserControl 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FNumericInt : UserControl 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FTrackBar : UserControl 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FGCodeEditor : TextBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FTextBox : TextBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FPictureBox : Image 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FRadioButton : UserControl
+    {
+    <#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FRadioButtonEnum<T> : ComboBox
+    {
+    <#@ include file="ControlProperties.txt" #>
+    }
+
+     public partial class FHorizontalLine : UserControl
+    {
+    <#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FTreeList : UserControl 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FGroupBox : UserControl 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+     public partial class FPanel : Panel 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FTableLayout : Grid 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FTabPanel : UserControl 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FListView<T> : ListBox 
+    {
+<#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FGridView : ListBox
+    {
+        <#@ include file="ControlProperties.txt" #>
+    }
+    
+    public partial class FColorPicker : UserControl
+    {
+        <#@ include file="ControlProperties.txt" #>
+    }
+
+    public partial class FPropertyGrid : UserControl
+    {
+        <#@ include file="ControlProperties.txt" #>
+    }
+
+     public partial class FJobList : UserControl
+    {
+        <#@ include file="ControlProperties.txt" #>
+    }
+
+     public partial class FPartList : UserControl
+    {
+        <#@ include file="ControlProperties.txt" #>
+    }
+}

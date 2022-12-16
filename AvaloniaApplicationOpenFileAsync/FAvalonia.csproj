@@ -27,4 +27,20 @@
   <ItemGroup>
     <ProjectReference Include="..\Core\FCore.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="favaloniaViews\Controls\AvaloniaControl.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AvaloniaControl.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="favaloniaViews\Controls\AvaloniaControl.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AvaloniaControl.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

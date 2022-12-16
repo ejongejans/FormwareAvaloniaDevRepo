@@ -3,7 +3,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:formwarectrls="clr-namespace:FAvalonia.favaloniaViews.Controls" 
         x:Class="AvaloniaApplicationOpenFileAsync.MainWindow"
         Title="AvaloniaApplicationOpenFileAsync">
-    <Button Name="OpenFileButton">Open file</Button>
+
+    <DockPanel >
+        <formwarectrls:FAvaloniaToolbar Background="Orange" DockPanel.Dock="Top" Name="MainToolbar"></formwarectrls:FAvaloniaToolbar>
+
+
+        <SplitView Name="SplitView1" IsPaneOpen="true" OpenPaneLength="500" DisplayMode="Inline" PanePlacement="Right" >
+            <SplitView.Pane>
+                <Border BorderThickness="0" BorderBrush="Black" Name="ToolsColumn" >
+                    <StackPanel Name="SplitterTableStack">
+
+
+                    </StackPanel>
+                </Border>
+            </SplitView.Pane>
+
+            <Panel Background="AliceBlue" Name="MainGrid">
+
+                <!-- <formware:OpenGLView  Name="glControlItself"></formware:OpenGLView> -->
+
+            </Panel>
+
+        </SplitView>
+    </DockPanel>
+
+ 
+    
+    
 </Window>

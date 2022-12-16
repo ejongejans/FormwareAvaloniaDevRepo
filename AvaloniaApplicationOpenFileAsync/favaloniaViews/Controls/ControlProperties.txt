@@ -1,0 +1,11 @@
+﻿public string FName { get { return Name; } set { Name = value; } }
+public string FToolTip { get; set; }
+public bool FEnabled { get { return this.IsEnabled; } set { IsEnabled = value; } }
+public int FHeight { get => (int)this.Height; set => this.Height = value; }
+public int FWidth { get => (int)this.Width; set => this.Width = value; }
+public bool FVisible { get { return this.IsVisible; } set { this.IsVisible = value; } }
+public int FPosY { get { return (int)this.Margin.Top; } set { this.Margin = new Avalonia.Thickness(this.Margin.Left, value,0,0); } }
+public int FPosX { get { return (int)this.Margin.Left; } set { this.Margin = new Avalonia.Thickness(value, this.Margin.Top, 0, 0); } }
+public int FColspan { get; set; }
+public object FTag { get => this.Tag; set => this.Tag = value; }
+public int FIndent { get; set; }

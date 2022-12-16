@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FCore;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,19 +11,25 @@ namespace Core
     /// <summary>
     /// command sample. This is usually bind to a menu item and short cut at well. 
     /// </summary>
-    public class OpenFileCommand : Command
+    public class ExampleCommand : Command
     {
+        private int exNr;
 
-        public OpenFileCommand() : base("OpenFile")
+
+
+        public ExampleCommand(int exampleNr) : base("example"+exampleNr)
         {
-            Category ="file";
+            exNr = exampleNr;
+            Category = "categoryHeader";
+            Image = FUtilSkia.RandomBitmap(24, 24);
         }
+
 
         public override string Title
         {
             get
             {
-                return "Open file";
+                return "Example command "+exNr;
             }
         }
 
@@ -29,13 +37,14 @@ namespace Core
         {
             get
             {
-                return "Openfile tooltip";
+                return "Tooltip for example command "+exNr;
             }
         }
 
         protected override void OnExecuted(EventArgs e)
         {
-            Open(); 
+            Trace.WriteLine("Fired from example command: " + exNr);
+            //Open(); 
         }
 
 
