@@ -26,13 +26,13 @@ namespace AvaloniaApplicationOpenFileAsync
 
             this.Opened += MainWindow_Opened;
 
-            this.TranslateBtn.Click += TranslateBtn_Click;
+           
             
         }
 
         private void TranslateBtn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            TransLb.Content = System.Globalization.CultureInfo.CurrentUICulture + ": " + FResource.AString;
+            
         }
 
         private void MainWindow_Opened(object? sender, System.EventArgs e)

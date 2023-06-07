@@ -154,7 +154,7 @@ namespace FAvalonia.favaloniaViews.Controls
                     btn.Margin = new Avalonia.Thickness(3, 0);
 
                     //THIS IS WHERE THE ASYNC CALL should start somehow. but the event handler is not async. 
-                    btn.FOnClick += (sender, args) => { cmd.ExecuteAsync(); };
+                    btn.FOnClick += async (sender, args) => { cmd.ExecuteAsync(); };
 
                     //link button to UI. 
                     CommandControl link = new CommandControl()

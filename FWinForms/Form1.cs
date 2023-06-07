@@ -5,7 +5,7 @@ namespace FWinForms
 {
     public partial class Form1 : Form
     {
-        OpenFileCommand cmd = new OpenFileCommand();
+        OpenFileCommand cmd = new OpenFileCommand(1);
         
 
         public Form1()
