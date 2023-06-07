@@ -15,12 +15,13 @@
             <SplitView.Pane>
                 <Border BorderThickness="0" BorderBrush="Black" Name="ToolsColumn" >
                     <StackPanel Name="SplitterTableStack">
-
-
+                        <Label Name="TransLb">a text that should be translated</Label>
+                        <Button Name="TranslateBtn">Click me to translate</Button>
                     </StackPanel>
                 </Border>
             </SplitView.Pane>
 
+            
             <Panel Background="AliceBlue" Name="MainGrid">
 
                 <!-- <formware:OpenGLView  Name="glControlItself"></formware:OpenGLView> -->

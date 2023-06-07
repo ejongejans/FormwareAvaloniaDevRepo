@@ -1,6 +1,7 @@
 using Avalonia.Controls;
 using AvaloniaApplicationOpenFileAsync.ViewFactory;
 using Core;
+using FAvalonia;
 using FCore;
 using System.Collections.Generic;
 
@@ -8,8 +9,7 @@ namespace AvaloniaApplicationOpenFileAsync
 {
     public partial class MainWindow : Window
     {
-        OpenFileCommand cmd = new OpenFileCommand();
-
+ 
         public static MainWindow currentWindow; //by lack of knowing a better way to get current window handle? 
 
         public MainWindow()
@@ -25,6 +25,14 @@ namespace AvaloniaApplicationOpenFileAsync
            
 
             this.Opened += MainWindow_Opened;
+
+            this.TranslateBtn.Click += TranslateBtn_Click;
+            
+        }
+
+        private void TranslateBtn_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            TransLb.Content = System.Globalization.CultureInfo.CurrentUICulture + ": " + FResource.AString;
         }
 
         private void MainWindow_Opened(object? sender, System.EventArgs e)
@@ -37,15 +45,11 @@ namespace AvaloniaApplicationOpenFileAsync
             List<ICommand> cmds = new List<ICommand>();
             
             for(int i = 0; i < cnt; i++)
-                cmds.Add(new ExampleCommand(i));
+                cmds.Add(new OpenFileCommand(i));
 
             return cmds;
         }
 
 
-        private void OpenFileButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            cmd.Execute();
-        }
     }
 }

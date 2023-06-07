@@ -12,7 +12,7 @@ namespace Core
     public class OpenFileCommand : Command
     {
 
-        public OpenFileCommand() : base("OpenFile")
+        public OpenFileCommand(int id) : base("OpenFile"+id)
         {
             Category ="file";
         }
@@ -35,9 +35,25 @@ namespace Core
 
         protected override void OnExecuted(EventArgs e)
         {
-            Open(); 
+            OpenAsync(); 
         }
 
+        protected override async void OnExecutedAsync(EventArgs e)
+        {
+            OpenAsync();
+        }
+
+
+        public async Task OpenAsync()
+        {
+            using (IOpenFileView d = FApp.viewsFactory.OpenView())
+            {
+                if (await d.ShowDialogAsync())
+                {
+                    Document.OpenFile(d.FileName);
+                }
+            }
+        }
 
         public void Open()
         {
@@ -49,7 +65,6 @@ namespace Core
                     Document.OpenFile(d.FileName);
                 }
             }
-
         }
     }
 }

@@ -69,5 +69,10 @@ namespace FWinForms
 
 
         }
+
+        public Task<bool> ShowDialogAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

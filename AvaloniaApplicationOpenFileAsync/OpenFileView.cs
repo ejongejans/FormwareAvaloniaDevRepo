@@ -42,6 +42,16 @@ namespace AvaloniaApplicationOpenFileAsync
             //d doesn't dispose? 
         }
 
+        public async Task<bool> ShowDialogAsync()
+        {
+            string[]? files = await d.ShowAsync(MainWindow.currentWindow);
+
+            if (files == null || files.Length == 0)
+                return false;
+            selectedFiles = files;
+            return true;
+        }
+
         public bool ShowDialog()
         {
 

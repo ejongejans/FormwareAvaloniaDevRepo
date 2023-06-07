@@ -152,7 +152,9 @@ namespace FAvalonia.favaloniaViews.Controls
                     FToolButton btn = new FToolButton(bmp);
                     btn.Background = SKColors.Transparent.ToSolidBrush();
                     btn.Margin = new Avalonia.Thickness(3, 0);
-                    btn.FOnClick += (sender, args) => { cmd.Execute(); };
+
+                    //THIS IS WHERE THE ASYNC CALL should start somehow. but the event handler is not async. 
+                    btn.FOnClick += (sender, args) => { cmd.ExecuteAsync(); };
 
                     //link button to UI. 
                     CommandControl link = new CommandControl()

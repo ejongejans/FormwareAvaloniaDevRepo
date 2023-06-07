@@ -13,12 +13,24 @@ namespace AvaloniaApplicationOpenFileAsync
 
         public override void OnFrameworkInitializationCompleted()
         {
+            System.Globalization.CultureInfo.CurrentUICulture = new System.Globalization.CultureInfo("ko-KR");
+
+
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+               
+
+
                 desktop.MainWindow = new MainWindow();
+
+
             }
 
             base.OnFrameworkInitializationCompleted();
+
+
+           
+
         }
     }
 }

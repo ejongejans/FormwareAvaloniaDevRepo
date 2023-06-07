@@ -44,21 +44,10 @@ namespace Core
         protected override void OnExecuted(EventArgs e)
         {
             Trace.WriteLine("Fired from example command: " + exNr);
-            //Open(); 
+            
         }
 
 
-        public void Open()
-        {
-            using (IOpenFileView d = FApp.viewsFactory.OpenView())
-            {
-                if (d.ShowDialog())
-                {
-
-                    Document.OpenFile(d.FileName);
-                }
-            }
-
-        }
+        
     }
 }

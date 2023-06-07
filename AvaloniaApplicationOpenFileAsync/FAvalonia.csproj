@@ -42,5 +42,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AvaloniaControl.tt</DependentUpon>
     </Compile>
+    <Compile Update="FResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="FResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

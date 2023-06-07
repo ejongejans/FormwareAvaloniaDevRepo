@@ -40,6 +40,14 @@ namespace Core
             //    FUICommands.Last = this; //set the last command.
         }
 
+        protected virtual async void OnExecutedAsync(EventArgs e)
+        {
+            Executed?.Invoke(this, e);
+
+            //if (this.EnabledAsLastCommand)
+            //    FUICommands.Last = this; //set the last command.
+        }
+
         /// <summary>
         /// Execute the command programatically.
         /// Triggers the onexecuted action with exmpty command args.
@@ -48,6 +56,11 @@ namespace Core
         public void Execute()
         {
             OnExecuted(EventArgs.Empty);
+        }
+
+        public async void ExecuteAsync()
+        {
+            OnExecutedAsync(EventArgs.Empty);
         }
 
         public void Execute(EventArgs e)

@@ -14,6 +14,8 @@ namespace Core
         string FileName { get; }
         string[] FileNames { get; }
 
+        Task<bool> ShowDialogAsync();
+
         bool ShowDialog();
     }
 }

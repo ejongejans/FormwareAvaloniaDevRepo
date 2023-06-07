@@ -32,6 +32,8 @@ namespace FCore
         bool Checked { get; set; }
         void Execute();
 
+        void ExecuteAsync();
+
         void Execute(EventArgs e);
 
         /*
